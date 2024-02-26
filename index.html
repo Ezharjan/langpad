@@ -17,21 +17,6 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="img/notepad-apple-icon.png" />
     <link rel="mask-icon" href="img/icon-mask.svg" color="black" />
-    <!-- for Facebook
-        <meta property="og:title" content="Notepad - Offline capable" />
-        <meta property="og:type" content="appliction" />
-        <meta property="og:image" content="https://notepad.js.org/img/thumbnail.png" />
-        <meta property="og:url" content="https://www.github.com/Ezharjan" />
-        <meta property="og:description"
-        content="An offline capable notepad powered by ServiceWorker. It's quick, distraction-free, dark mode enabled, mobile compatible(Android, iOS) and minimalist in nature." />
-    -->
-    <!-- for Twitter
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Notepad - Offline capable" />
-        <meta property="twitter:image" content="https://notepad.js.org/img/thumbnail.png" />
-        <meta property="twitter:description"
-        content="An offline capable notepad powered by ServiceWorker. It's quick, distraction-free, dark mode enabled, mobile compatible(Android, iOS) and minimalist in nature." />
-    -->
 </head>
 
 <body>
@@ -65,28 +50,20 @@
                     </a>
                 </span>
                 <span title="Enable dark mode">
-                    <a id="mode" class="navbar-brand">
-                        <img src="img/navbar/light-theme.svg" alt="Light theme Icon" id="light" />
-                        <img src="img/navbar/dark-theme.svg" alt="Dark theme Icon" id="dark" />
+                    <a id="mode" class="navbar-brand head-icon">
+                        <img src="img/navbar/light-theme.svg" alt="Light theme Icon" id="light"/>
+                        <img src="img/navbar/dark-theme.svg" alt="Dark theme Icon" id="dark"/>
                     </a>
                 </span>
-                <!-- <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">主题
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1" href="#">Uyghur</a>
-                        </li>
-                        <li role="presentation">
-                            <a role="menuitem" tabindex="-1" href="#">English</a>
-                        </li>
-                    </ul>
-                </div> -->
                 <span title="Change language">
-                    <a id="lang" class="navbar-brand">
-                        <img src="img/navbar/uy-lang.svg" alt="Uyghurche Icon" id="uygch" />
-                        <img src="img/navbar/en-lang.svg" alt="English Icon" id="eng" />
+                    <a id="lang" class="navbar-brand head-icon">
+                        <img src="img/navbar/uy-lang.svg" alt="Uyghurche Icon" id="uygch"/>
+                        <img src="img/navbar/en-lang.svg" alt="English Icon" id="eng"/>
+                    </a>
+                </span>
+                <span title="Keyboard">
+                    <a id="keyboard" class="navbar-brand head-icon" href="./keyboard.html" target="_blank">
+                        <img src="img/navbar/keyboard.svg" alt="Keyboard" id="keyboard_ico" />
                     </a>
                 </span>
             </div>
@@ -107,6 +84,17 @@
                 autofocus></textarea>
         </div>
 
+        <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+            <button id="btn_oo" type="button"
+                style="background-color: #7ED321;width: 62px;height: 30px;color: #FFFFFF; font-weight: bold;"
+                onclick="btnOOClicked()">ö</button>
+            <button id="btn_uu" type="button"
+                style="background-color: #7ED321;width: 62px;height: 30px;color: #FFFFFF; font-weight: bold;"
+                onclick="btnUUClicked()">ü</button>
+            <button id="btn_ee" type="button"
+                style="background-color: #7ED321;width: 62px;height: 30px;color: #FFFFFF; font-weight: bold;"
+                onclick="btnEEClicked()">ë</button>
+        </div>
 
         <div id="letter_select">
             <fieldset class="letter_select_fields">
@@ -173,10 +161,10 @@
                 <div class="modal-body modal-container">
                     <p>
                         Notepad is an offline-capable
-                        <a href="https://www.github.com/Ezharjan" target="_blank">Progressive Web App</a>.
+                        <a href="https://www.github.com/WAITING_TO_BE_DONE" target="_blank">Progressive Web App</a>.
                     </p>
 
-                    <p>The app serves the following features:</p>
+                    <p style="font-weight: bold;">The app serves the following features:</p>
 
                     <ul>
                         <li>
@@ -195,7 +183,7 @@
                             Android-supported devices to launch the app from
                             the home screen.
                         </li>
-                        <li>Dark mode.</li>
+                        <li>Switch between light mode and dark mode.</li>
                         <li>
                             Privacy-focused - We'll never collect your
                             precious data.
@@ -203,20 +191,22 @@
                         <li>Light-weight - Loads almost instantly.</li>
                         <li>
                             It's
-                            <a href="https://github.com/Ezharjan" target="_blank">open-source</a>!
+                            <a href="https://github.com/WAITING_TO_BE_DONE" target="_blank">open-source</a>!
                         </li>
+                        <li>Multilingual convertor.</li>
                     </ul>
+
+                    <p style="font-weight: bold;">Here is the alphabet for your reference:</p>
+                    <div style="text-align: center; margin: top 30%; bottom: 50px;" id="alphabet">
+                        <img style="max-width:100%;overflow:hidden;" src="./img/alphabet.jpeg">
+                    </div>
+
+                    <br>
+
                     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" />
-                    <p>
-                        If you liked using this app, consider a small
-                        <a href="https://www.paypal.com/paypalme/AmitMerchant" target="_blank">donation</a>
-                        so that I keep working on improving it further.
-                        Icons from
-                        <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>.
-                    </p>
                     <p style="text-align: center; margin-top: 10px">
                         <b>Made with ❤️ by
-                            <a href="https://www.github.com/Ezharjan" target="_blank">Alexander Ezharjan</a></b>
+                            <a href="https://www.github.com/WAITING_TO_BE_DONE" target="_blank">Alexander</a></b>
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -235,6 +225,7 @@
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/uiutils.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i["GoogleAnalyticsObject"] = r;
