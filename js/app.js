@@ -37,23 +37,12 @@ $(document).ready(function () {
     localStorage.setItem("isUserPreferredTheme", "false");
   }
 
-  if (localStorage.getItem("mode") && localStorage.getItem("mode") !== "") {
-    if (localStorage.getItem("mode") === "dark") {
-      enableDarkMode(lightModeText, darkMetaColor, metaThemeColor);
-    } else {
-      enableLightMode(darkModeText, lightMetaColor, metaThemeColor);
-    }
-  }
-
-  if (localStorage.getItem("lang") && localStorage.getItem("lang") !== "") {
-    if (localStorage.getItem("lang") === "uygch") {
-      enableUyg(englishModeText);
-    } else {
-      enableEnglish(uygModeText);
-    }
-  }else{
-    enableEnglish(uygModeText);
-  }
+  const mode = localStorage.getItem("mode");
+  const lang = localStorage.getItem("lang");  
+  const enableModeFunction = mode === "dark" ? enableDarkMode : enableLightMode;
+  const enableLangFunction = lang === "uygch" ? enableUyg : enableEnglish;
+  enableModeFunction(mode === "" ? darkModeText : lightModeText, mode === "dark" ? darkMetaColor : lightMetaColor, metaThemeColor);
+  enableLangFunction(lang === "" ? uygModeText : englishModeText);
 
   $("#note").keyup(
     debounce(function () {
@@ -98,9 +87,7 @@ $(document).ready(function () {
   $("#lang").click(function () {
     var targetNode = document.getElementById("note");
     changeDirection(targetNode, !isGlobalUyghur); ///this function and the last param is from uygch.js
-    isGlobalUyghur
-      ? enableUyg(englishModeText)
-      : enableEnglish(uygModeText);
+    isGlobalUyghur ? enableUyg(englishModeText) : enableEnglish(uygModeText);
     isGlobalUyghur = !isGlobalUyghur;
   });
 
