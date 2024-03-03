@@ -98,15 +98,15 @@ function enableLightMode(darkmodeText, lightMetaColor, metaThemeColor) {
     localStorage.setItem('mode', 'light');
 }
 
-function enableEnglish(uyghurModeText) {
-    $('#lang').attr('title', uyghurModeText);
+function enableEnglish(hintTxt) {
+    $('#lang').attr('title', hintTxt);
     $('#uygch').show();
     $('#eng').hide();
     localStorage.setItem('lang', 'eng');
 }
 
-function enableUyghur(englishModeText) {
-    $('#lang').attr('title', englishModeText);
+function enableUyg(hintTxt) {
+    $('#lang').attr('title', hintTxt);
     $('#eng').show();
     $('#uygch').hide();
     localStorage.setItem('lang', 'uygch');

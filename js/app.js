@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   const darkModeText = "Enable dark mode";
   const lightModeText = "Enable light mode";
-  let uyghurModeTexts = "Enable Uyghurche";
+  let uygModeText = "Enable Uyghurche";
   let englishModeText = "Enable English";
 
   const darkMetaColor = "#0d1117";
@@ -47,10 +47,12 @@ $(document).ready(function () {
 
   if (localStorage.getItem("lang") && localStorage.getItem("lang") !== "") {
     if (localStorage.getItem("lang") === "uygch") {
-      enableUyghur(englishModeText);
+      enableUyg(englishModeText);
     } else {
-      enableEnglish(uyghurModeTexts);
+      enableEnglish(uygModeText);
     }
+  }else{
+    enableEnglish(uygModeText);
   }
 
   $("#note").keyup(
@@ -97,8 +99,8 @@ $(document).ready(function () {
     var targetNode = document.getElementById("note");
     changeDirection(targetNode, !isGlobalUyghur); ///this function and the last param is from uygch.js
     isGlobalUyghur
-      ? enableUyghur(englishModeText)
-      : enableEnglish(uyghurModeTexts);
+      ? enableUyg(englishModeText)
+      : enableEnglish(uygModeText);
     isGlobalUyghur = !isGlobalUyghur;
   });
 
