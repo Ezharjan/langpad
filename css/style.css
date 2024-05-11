@@ -139,12 +139,33 @@ textarea {
     text-shadow: none;
 }
 
+.container_menu {
+    position: relative;
+    margin-bottom: 50px;
+}
+
 .container {
     padding-right: 0px;
     padding-left: 0px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; 
 }
+
+.navbar-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
 
 textarea {
     padding: 8px;
@@ -450,13 +471,13 @@ textarea {
 #letter_div {
     margin-right: 11px;
     color: red;
-	display: inline;
+    display: inline;
     direction: rtl;
 }
 
 
 .letter_select_fields {
-	color: red;
-	display: inline;
-	direction: rtl;
+    color: red;
+    display: inline;
+    direction: rtl;
 }

@@ -20,62 +20,64 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <span>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </span>
-                <span><a class="navbar-brand app-heading" href="#">Notepad</a></span>
-                <span>
-                    <a id="clearNotes" class="navbar-brand trash-icon" title="Delete Notes">
-                        <img src="img/navbar/delete.svg" alt="Delete Icon" />
-                    </a>
-                </span>
-                <span>
-                    <a id="downloadNotes" class="navbar-brand download-icon" title="Download Notes [Ctrl/Cmd + S]">
-                        <img src="img/navbar/download.svg" alt="Download Icon" />
-                    </a>
-                </span>
-                <span>
-                    <a href="javascript:void(0);" id="copyToClipboard" class="navbar-brand"
-                        title="Copy notes to clipboard">
-                        <img src="img/navbar/copy.svg" alt="Copy Icon" />
-                    </a>
-                </span>
-                <span title="Enable dark mode">
-                    <a id="mode" class="navbar-brand head-icon">
-                        <img src="img/navbar/light-theme.svg" alt="Light theme Icon" id="light"/>
-                        <img src="img/navbar/dark-theme.svg" alt="Dark theme Icon" id="dark"/>
-                    </a>
-                </span>
-                <span title="Change language">
-                    <a id="lang" class="navbar-brand head-icon">
-                        <img src="img/navbar/uy-lang.svg" alt="Uyghurche Icon" id="uygch"/>
-                        <img src="img/navbar/en-lang.svg" alt="English Icon" id="eng"/>
-                    </a>
-                </span>
-                <span title="Keyboard">
-                    <a id="keyboard" class="navbar-brand head-icon" href="./keyboard.html" target="_blank">
-                        <img src="img/navbar/keyboard.svg" alt="Keyboard" id="keyboard_ico" />
-                    </a>
-                </span>
+    <div class="container_menu">
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <span>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </span>
+                    <span><a class="navbar-brand app-heading" href="#">Notepad</a></span>
+                    <span>
+                        <a id="clearNotes" class="navbar-brand trash-icon" title="Delete Notes">
+                            <img src="img/navbar/delete.svg" alt="Delete Icon" />
+                        </a>
+                    </span>
+                    <span>
+                        <a id="downloadNotes" class="navbar-brand download-icon" title="Download Notes [Ctrl/Cmd + S]">
+                            <img src="img/navbar/download.svg" alt="Download Icon" />
+                        </a>
+                    </span>
+                    <span>
+                        <a href="javascript:void(0);" id="copyToClipboard" class="navbar-brand"
+                            title="Copy notes to clipboard">
+                            <img src="img/navbar/copy.svg" alt="Copy Icon" />
+                        </a>
+                    </span>
+                    <span title="Enable dark mode">
+                        <a id="mode" class="navbar-brand head-icon">
+                            <img src="img/navbar/light-theme.svg" alt="Light theme Icon" id="light"/>
+                            <img src="img/navbar/dark-theme.svg" alt="Dark theme Icon" id="dark"/>
+                        </a>
+                    </span>
+                    <span title="Change language">
+                        <a id="lang" class="navbar-brand head-icon">
+                            <img src="img/navbar/uy-lang.svg" alt="Uyghurche Icon" id="uygch"/>
+                            <img src="img/navbar/en-lang.svg" alt="English Icon" id="eng"/>
+                        </a>
+                    </span>
+                    <span title="Keyboard">
+                        <a id="keyboard" class="navbar-brand head-icon" href="./keyboard.html" target="_blank">
+                            <img src="img/navbar/keyboard.svg" alt="Keyboard" id="keyboard_ico" />
+                        </a>
+                    </span>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#about" data-toggle="modal" data-target="#aboutModal">About</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#about" data-toggle="modal" data-target="#aboutModal">About</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <div class="container">
         <div class="starter-template" style="border-bottom: 9px solid #008cff;">
